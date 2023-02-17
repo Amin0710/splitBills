@@ -17,7 +17,7 @@ for (let i = 2; i <= 20; i++) {
 
                         <td><input id="amount_row_${i}" type="text" class="form-control onlyNumbers amountRow" /></td>
                         <td>
-                            <select class="form-select">
+                            <select id="dropdown_row_${i}" class="form-select">
                                 <option value="" id="dropdown_friend_1_row_${i}">Abrar</option>
                                 <option value="" id="dropdown_friend_2_row_${i}">Adnan</option>
                                 <option value="" id="dropdown_friend_3_row_${i}">Afia</option>
@@ -51,7 +51,7 @@ for (let i = 2; i <= 20; i++) {
                                     <h3 class="text-secondary" id="pp_heading_row_${i}">Put individual share amount</h3>
                                     <div class="container">
                                         <table class="table table-bordered">
-                                            <thead id="table_head">
+                                            <thead id="table_head_row_${i}">
                                                 <tr>
                                                     <th id="tableHead_friend_1_row_${i}">Abrar</th>
                                                     <th id="tableHead_friend_2_row_${i}">Adnan</th>
@@ -63,7 +63,7 @@ for (let i = 2; i <= 20; i++) {
                                                     <th id="tableHead_friend_8_row_${i}">Sijil</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="table_body">
+                                            <tbody id="table_body_row_${i}">
                                                 <td id="tableBody_friend_1_row_${i}" ><input type="text" id="friend_1_input_row_${i}"
                                                         class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
                                                 <td id="tableBody_friend_2_row_${i}" ><input type="text" id="friend_2_input_row_${i}"
