@@ -51,7 +51,7 @@ for (let i = 2; i <= 20; i++) {
                                     <h3 class="text-secondary" id="pp_heading_row_${i}">Put individual share amount</h3>
                                     <div class="container">
                                         <table class="table table-bordered">
-                                            <thead>
+                                            <thead id="table_head">
                                                 <tr>
                                                     <th id="tableHead_friend_1_row_${i}">Abrar</th>
                                                     <th id="tableHead_friend_2_row_${i}">Adnan</th>
@@ -63,22 +63,22 @@ for (let i = 2; i <= 20; i++) {
                                                     <th id="tableHead_friend_8_row_${i}">Sijil</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <td><input type="text" id="friend_1_input_row_${i}"
+                                            <tbody id="table_body">
+                                                <td id="tableBody_friend_1_row_${i}" ><input type="text" id="friend_1_input_row_${i}"
                                                         class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td><input type="text" id="friend_2_input_row_${i}"
+                                                <td id="tableBody_friend_2_row_${i}" ><input type="text" id="friend_2_input_row_${i}"
                                                         class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td><input type="text" id="friend_3_input_row_${i}"
+                                                <td id="tableBody_friend_3_row_${i}" ><input type="text" id="friend_3_input_row_${i}"
                                                         class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td><input type="text" id="friend_4_input_row_${i}"
+                                                <td id="tableBody_friend_4_row_${i}" ><input type="text" id="friend_4_input_row_${i}"
                                                         class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td><input type="text" id="friend_5_input_row_${i}"
+                                                <td id="tableBody_friend_5_row_${i}" ><input type="text" id="friend_5_input_row_${i}"
                                                         class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td><input type="text" id="friend_6_input_row_${i}"
+                                                <td id="tableBody_friend_6_row_${i}" ><input type="text" id="friend_6_input_row_${i}"
                                                         class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td><input type="text" id="friend_7_input_row_${i}"
+                                                <td id="tableBody_friend_7_row_${i}" ><input type="text" id="friend_7_input_row_${i}"
                                                         class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td><input type="text" id="friend_8_input_row_${i}"
+                                                <td id="tableBody_friend_8_row_${i}" ><input type="text" id="friend_8_input_row_${i}"
                                                         class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
                                             </tbody>
                                         </table>
