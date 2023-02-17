@@ -46,7 +46,7 @@ for (let i = 2; i <= 20; i++) {
                                 <i class="fa-solid fa-square-plus fa-2x"></i>
                             </button>
                             <!-- ppTable -->
-                            <div class="collapse show" id="ppTable_row_${i}">
+                            <div class="collapse" id="ppTable_row_${i}">
                                 <div class="card card-body">
                                     <h3 class="text-secondary" id="pp_heading_row_${i}">Put individual share amount</h3>
                                     <div class="container">

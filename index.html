@@ -77,7 +77,14 @@
                         <th>Amount $</th>
                         <th>Expense Paid by</th>
                         <th>Quick</th>
-                        <th>PP</th>
+                        <th>PP
+                            <div>
+                                <button id="buttonPPPlus" class="btn" type="button"><i
+                                        class="fa-solid fa-square-plus"></i></button>
+                                <button id="buttonPPMinus" class="btn" type="button"><i
+                                        class="fa-solid fa-square-minus"></i></button>
+                            </div>
+                        </th>
                     </tr>
                 </thead>
                 <tbody id="table-body">
@@ -125,7 +132,7 @@
                                 <i class="fa-solid fa-square-plus fa-2x"></i>
                             </button>
                             <!-- ppTable -->
-                            <div class="collapse show" id="ppTable_row_1">
+                            <div class="collapse" id="ppTable_row_1">
                                 <div class="card card-body">
                                     <h3 class="text-secondary" id="pp_heading_row_1">Put individual share amount</h3>
                                     <div class="container">
@@ -143,22 +150,38 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="table_body_row_1">
-                                                <td id="tableBody_friend_1_row_1"><input type="text" id="friend_1_input_row_1"
-                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td id="tableBody_friend_2_row_1"><input type="text" id="friend_2_input_row_1"
-                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td id="tableBody_friend_3_row_1"><input type="text" id="friend_3_input_row_1"
-                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td id="tableBody_friend_4_row_1"><input type="text" id="friend_4_input_row_1"
-                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td id="tableBody_friend_5_row_1"><input type="text" id="friend_5_input_row_1"
-                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td id="tableBody_friend_6_row_1"><input type="text" id="friend_6_input_row_1"
-                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td id="tableBody_friend_7_row_1"><input type="text" id="friend_7_input_row_1"
-                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
-                                                <td id="tableBody_friend_8_row_1"><input type="text" id="friend_8_input_row_1"
-                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_1_row_1"><input type="text"
+                                                        id="friend_1_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers"
+                                                        style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_2_row_1"><input type="text"
+                                                        id="friend_2_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers"
+                                                        style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_3_row_1"><input type="text"
+                                                        id="friend_3_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers"
+                                                        style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_4_row_1"><input type="text"
+                                                        id="friend_4_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers"
+                                                        style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_5_row_1"><input type="text"
+                                                        id="friend_5_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers"
+                                                        style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_6_row_1"><input type="text"
+                                                        id="friend_6_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers"
+                                                        style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_7_row_1"><input type="text"
+                                                        id="friend_7_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers"
+                                                        style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_8_row_1"><input type="text"
+                                                        id="friend_8_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers"
+                                                        style="font-size: 0.7rem" /></td>
                                             </tbody>
                                         </table>
                                     </div>
@@ -205,6 +228,7 @@
 
     <!-- Loacl JS -->
     <script src="JS/tableRow100.js"></script>
+    <script src="JS/collapseShow.js"></script>
     <script src="JS/friendsDropdown.js"></script>
     <script src="JS/validation.js"></script>
     <script src="JS/claculation.js"></script>

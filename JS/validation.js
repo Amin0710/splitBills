@@ -27,9 +27,9 @@ function ppDisable(rowId) {
 		const isBillEveryone = checkbox1.checked;
 		const isBillEqually = checkbox2.checked;
 		button.disabled = isBillEveryone && isBillEqually;
-		// if (button.disabled) {
-		// 	ppTable.classList.remove("show");
-		// }
+		if (button.disabled) {
+			ppTable.classList.remove("show");
+		}
 
 		ppHead.innerText =
 			isBillEveryone === false && isBillEqually === true
