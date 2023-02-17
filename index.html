@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split Bills</title>
+    <!-- BS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <!-- Vanilla CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google fonts -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap");
+    </style>
+</head>
+
+<body class="mx-auto" style="max-width: 1200px">
+    <section>
+        <h1 class="text-center mt-2 bg-primary text-white">Split Bills</h1>
+        <p class="text-center mt-2 bg-info text-white">Friends Name</p>
+        <div class="container">
+            <div class="row g-2">
+                <div class="col-3">
+                    <div class="p-3 border bg-light">
+                        <input class="friends" id="friend_1" type="text" placeholder="Abrar" value="Abrar" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-3 border bg-light">
+                        <input class="friends" id="friend_2" type="text" placeholder="Adnan" value="Adnan" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-3 border bg-light">
+                        <input class="friends" id="friend_3" type="text" placeholder="Afia" value="Afia" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-3 border bg-light">
+                        <input class="friends" id="friend_4" type="text" placeholder="Kazi" value="Kazi" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-3 border bg-light">
+                        <input class="friends" id="friend_5" type="text" placeholder="Naim" value="Naim" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-3 border bg-light">
+                        <input class="friends" id="friend_6" type="text" placeholder="Nifar" value="Nifar" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-3 border bg-light">
+                        <input class="friends" id="friend_7" type="text" placeholder="Promi" value="Promi" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-3 border bg-light">
+                        <input class="friends" id="friend_8" type="text" placeholder="Sijil" value="Sijil" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5 text-center">
+        <h2 class="text-center mt-2 bg-secondary text-white">Money Talks</h2>
+        <div class="container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Type Of Expense</th>
+                        <th>Expense Name</th>
+                        <th>Amount $</th>
+                        <th>Expense Paid by</th>
+                        <th>Quick</th>
+                        <th>PP</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr class="align-middle">
+                        <td>
+                            <select class="form-select">
+                                <option value="">Entry/Ticket</option>
+                                <option value="">Food and Beverage</option>
+                                <option value="">Uber</option>
+                                <option value="">Shopping</option>
+                                <option value="">Mod/Gaja</option>
+                                <option value="">Others</option>
+                            </select>
+                        </td>
+                        <td><input type="text" class="form-control" /></td>
+
+                        <td><input id="amount_row_1" type="text" class="form-control onlyNumbers amountRow" /></td>
+                        <td>
+                            <select id="dropdown" class="form-select">
+                                <option value="" id="dropdown_friend_1_row_1">Abrar</option>
+                                <option value="" id="dropdown_friend_2_row_1">Adnan</option>
+                                <option value="" id="dropdown_friend_3_row_1">Afia</option>
+                                <option value="" id="dropdown_friend_4_row_1">Kazi</option>
+                                <option value="" id="dropdown_friend_5_row_1">Naim</option>
+                                <option value="" id="dropdown_friend_6_row_1">Nifar</option>
+                                <option value="" id="dropdown_friend_7_row_1">Promi</option>
+                                <option value="" id="dropdown_friend_8_row_1">Sijil</option>
+                            </select>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkbox1_row_1" checked />
+                                <label class="form-check-label" for="checkbox1_row_1">Bill Evevyone</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkbox2_row_1" checked />
+                                <label class="form-check-label" for="checkbox2_row_1">Bill Equally</label>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- +++ Button -->
+                            <button id="button_row_1" class="btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#ppTable_row_1" aria-expanded="false" aria-controls="ppTable_row_1"
+                                disabled>
+                                <i class="fa-solid fa-square-plus fa-2x"></i>
+                            </button>
+                            <!-- ppTable -->
+                            <div class="collapse show" id="ppTable_row_1">
+                                <div class="card card-body">
+                                    <h3 class="text-secondary" id="pp_heading_row_1">Put individual share amount</h3>
+                                    <div class="container">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th id="tableHead_friend_1_row_1">Abrar</th>
+                                                    <th id="tableHead_friend_2_row_1">Adnan</th>
+                                                    <th id="tableHead_friend_3_row_1">Afia</th>
+                                                    <th id="tableHead_friend_4_row_1">Kazi</th>
+                                                    <th id="tableHead_friend_5_row_1">Naim</th>
+                                                    <th id="tableHead_friend_6_row_1">Nifar</th>
+                                                    <th id="tableHead_friend_7_row_1">Promi</th>
+                                                    <th id="tableHead_friend_8_row_1">Sijil</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <td id="tableBody_friend_8_row_1"><input type="text" id="friend_1_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_8_row_1"><input type="text" id="friend_2_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_8_row_1"><input type="text" id="friend_3_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_8_row_1"><input type="text" id="friend_4_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_8_row_1"><input type="text" id="friend_5_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_8_row_1"><input type="text" id="friend_6_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_8_row_1"><input type="text" id="friend_7_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
+                                                <td id="tableBody_friend_8_row_1"><input type="text" id="friend_8_input_row_1"
+                                                        class="form-control form-control-sm onlyNumbers" style="font-size: 0.7rem" /></td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="text-center">
+        <button type="button" class="btn btn-success mb-5" data-bs-toggle="modal" data-bs-target="#resultModal">Result
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">Result: How owe whom how much</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    Say Ameen
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- BS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e0a42824a3.js" crossorigin="anonymous"></script>
+
+    <!-- Loacl JS -->
+    <script src="JS/tableRow100.js"></script>
+    <script src="JS/friendsDropdown.js"></script>
+    <script src="JS/validation.js"></script>
+    <script src="JS/claculation.js"></script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>
