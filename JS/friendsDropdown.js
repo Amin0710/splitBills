@@ -1,7 +1,7 @@
 //Friends array
 const inputFields = Array.from(document.querySelectorAll(".friends"));
 
-const friendsArray = inputFields.map((input) => {
+const friendArray = inputFields.map((input) => {
 	return {
 		id: input.getAttribute("id"),
 		value: input.value,
@@ -16,7 +16,7 @@ function updateDropdown() {
 		// Dropdown menu taking data form array
 		const dropdown = document.getElementById(`dropdown_row_${rowId}`);
 
-		const options = friendsArray
+		const options = friendArray
 			.filter((friend) => friend.value !== "")
 			.map((friend) => {
 				return `<option value="${friend.value}" id="${friend.id}">${friend.value}</option>`;
@@ -38,7 +38,7 @@ function updateTableHeads() {
 		const tdElements = ppTableBody.querySelectorAll("td");
 
 		for (let i = 0; i < thElements.length; i++) {
-			const friend = friendsArray[i];
+			const friend = friendArray[i];
 			thElements[i].textContent = friend.value;
 			if (friend.value === "") {
 				thElements[i].style.display = "none";
@@ -54,12 +54,12 @@ function updateTableHeads() {
 // Add event listener to input field to update the dropdown options
 inputFields.forEach((input) => {
 	input.addEventListener("keyup", () => {
-		friendsArray.forEach((friend) => {
+		friendArray.forEach((friend) => {
 			friend.value = document.getElementById(friend.id).value;
 		});
 		updateDropdown();
 		updateTableHeads();
 
-		// for (let rowId = 1; rowId <= numOfRow; rowId++) {}
+		friends = friendArray.filter((e) => e.value !== "").length;
 	});
 });
